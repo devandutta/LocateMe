@@ -14,6 +14,9 @@
 		07521BD11C0716C700293C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07521BCF1C0716C700293C16 /* LaunchScreen.storyboard */; };
 		07521BDC1C0716C700293C16 /* LocateMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07521BDB1C0716C700293C16 /* LocateMeTests.swift */; };
 		07521BE71C0716C700293C16 /* LocateMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07521BE61C0716C700293C16 /* LocateMeUITests.swift */; };
+		07521BF51C0739A100293C16 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07521BF41C0739A100293C16 /* CoreLocation.framework */; };
+		07521BF71C074EE100293C16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07521BF61C074EE100293C16 /* MapKit.framework */; };
+		07521BF91C07516400293C16 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07521BF81C07516400293C16 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		07521BE21C0716C700293C16 /* LocateMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocateMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07521BE61C0716C700293C16 /* LocateMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateMeUITests.swift; sourceTree = "<group>"; };
 		07521BE81C0716C700293C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07521BF41C0739A100293C16 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		07521BF61C074EE100293C16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		07521BF81C07516400293C16 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07521BF71C074EE100293C16 /* MapKit.framework in Frameworks */,
+				07521BF51C0739A100293C16 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +85,9 @@
 		07521BBA1C0716C700293C16 = {
 			isa = PBXGroup;
 			children = (
+				07521BF81C07516400293C16 /* Place.swift */,
+				07521BF61C074EE100293C16 /* MapKit.framework */,
+				07521BF41C0739A100293C16 /* CoreLocation.framework */,
 				07521BC51C0716C700293C16 /* LocateMe */,
 				07521BDA1C0716C700293C16 /* LocateMeTests */,
 				07521BE51C0716C700293C16 /* LocateMeUITests */,
@@ -193,6 +204,7 @@
 				TargetAttributes = {
 					07521BC21C0716C700293C16 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2GXA3K9NUN;
 					};
 					07521BD61C0716C700293C16 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -256,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07521BF91C07516400293C16 /* Place.swift in Sources */,
 				07521BC91C0716C700293C16 /* ViewController.swift in Sources */,
 				07521BC71C0716C700293C16 /* AppDelegate.swift in Sources */,
 			);
@@ -399,10 +412,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LocateMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = devan.dutta.LocateMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LocateMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = devan.dutta.LocateMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +505,7 @@
 				07521BED1C0716C700293C16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07521BEE1C0716C700293C16 /* Build configuration list for PBXNativeTarget "LocateMeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +514,7 @@
 				07521BF01C0716C700293C16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07521BF11C0716C700293C16 /* Build configuration list for PBXNativeTarget "LocateMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +523,7 @@
 				07521BF31C0716C700293C16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
